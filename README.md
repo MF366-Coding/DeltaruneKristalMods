@@ -1,2 +1,4 @@
-# DeltaruneKristalMods
-My Kristal mods (Deltarune). 
+# My Kristal Mods
+A personal archive. 
+
+
