@@ -47,23 +47,26 @@ function Dummy:init()
     -- Text displayed at the bottom of the screen when the enemy has low health
     self.low_health_text = "* The dummy is furious."
 
-    self:registerAct("Check", "", {"noelle"})
     -- Register act called "NEO Power"
-    self:registerAct("...", "...", {"noelle"})
+    self:registerAct("NEO POWER", "...", {"noelle"})
+    self:registerAct("NEO POWER", "...", {"noelle"})
+    self:registerAct("NEO POWER", "...", {"noelle"})
+    self:registerAct("NEO POWER", "...", {"noelle"})
+    self:registerAct("NEO POWER", "...", {"noelle"})
+    self:registerAct("NEO POWER", "...", {"noelle"})
+    self:registerAct("NEO POWER", "...", {"noelle"})
+    self:registerAct("NEO POWER", "...", {"noelle"})
     -- Register party act with Ralsei called "Tell Story"
     -- (second argument is description, usually empty)
     -- self:registerAct("Tell Story", "", {"ralsei"})
 end
 
 function Dummy:onAct(battler, name)
-    if name == "..." then
+    if name == "NEO POWER" then
         -- Change this enemy's dialogue for 1 turn
         -- self.dialogue_override = "What did that do bruh?"
         -- Act text (since it's a list, multiple textboxes)
-        return {
-            "* Nothing happened.",
-            "* Just like when you\nstole HIS soul."
-        }
+        return "* Nothing happened."
 
     elseif name == "Standard" then --X-Action
         -- Give the enemy 50% mercy

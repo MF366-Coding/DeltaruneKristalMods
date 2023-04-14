@@ -24,7 +24,7 @@
 
     // The inventory. Contains three darkburgers, a cell phone and a shadow crystal by default.
     "inventory": {
-        "items": ["darkburger", "neo_ring"],
+        "items": ["darkburger"],
         "key_items": ["shadowcrystal"]
     },
 
