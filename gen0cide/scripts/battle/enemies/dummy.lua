@@ -9,17 +9,17 @@ function Dummy:init()
     self:setActor("dummy")
 
     -- Enemy health
-    self.max_health = 48784154836813614
-    self.health = 16517327624
+    self.max_health = 1000
+    self.health = 750
     -- Enemy attack (determines bullet damage)
-    self.attack = 1000
+    self.attack = 10
     -- Enemy defense (usually 0)
     self.defense = 0
     -- Enemy reward
-    self.money = 1000000000000000000000000000000
+    self.money = 1
 
     -- Mercy given when sparing this enemy before its spareable (20% for basic enemies)
-    self.spare_points = 5
+    self.spare_points = 15
 
     -- List of possible wave ids, randomly picked each turn
     self.waves = {
@@ -30,24 +30,42 @@ function Dummy:init()
 
     -- Dialogue randomly displayed in the enemy's speech bubble
     self.dialogue = {
-        "Die already!",
-        "No, I am not just a dummy!",
-        "I am your worst nightmare......"
+        "Hi guys! I am Ralsei's dummy!",
+        "Why do you want to beat me up?",
+        "Ralsei won't be very happy about it..."
     }
 
     -- Check text (automatically has "ENEMY NAME - " at the start)
-    self.check = "AT infinite??? DF 0\n* Deadlier than it looks\n* Your worst nightmare..."
+    self.check = "AT 10 DF 0\n* A sad dummy.\n* Looks like Ralsei."
 
     -- Text randomly displayed at the bottom of the screen each turn
     self.text = {
-        "* The dummy gives you a creepy\nsmile.",
-        "* The power of death is\nin the air.",
-        "* Smells like nightmares.",
+        "* The dummy seems sad..",
+        "* Smells like fluffy\ndummies.",
+        "* The dummy is still not\nquite happy...",
     }
     -- Text displayed at the bottom of the screen when the enemy has low health
-    self.low_health_text = "* The dummy is furious."
+    self.low_health_text = "* The dummy is even more\nunhappy now."
 
     -- Register act called "NEO Power"
+    self:registerAct("NEO POWER", "...", {"noelle"})
+    self:registerAct("NEO POWER", "...", {"noelle"})
+    self:registerAct("NEO POWER", "...", {"noelle"})
+    self:registerAct("NEO POWER", "...", {"noelle"})
+    self:registerAct("NEO POWER", "...", {"noelle"})
+    self:registerAct("NEO POWER", "...", {"noelle"})
+    self:registerAct("NEO POWER", "...", {"noelle"})
+    self:registerAct("NEO POWER", "...", {"noelle"})
+    self:registerAct("NEO POWER", "...", {"noelle"})
+    self:registerAct("NEO POWER", "...", {"noelle"})
+    self:registerAct("NEO POWER", "...", {"noelle"})
+    self:registerAct("NEO POWER", "...", {"noelle"})
+    self:registerAct("NEO POWER", "...", {"noelle"})
+    self:registerAct("NEO POWER", "...", {"noelle"})
+    self:registerAct("NEO POWER", "...", {"noelle"})
+    self:registerAct("NEO POWER", "...", {"noelle"})
+    self:registerAct("NEO POWER", "...", {"noelle"})
+    self:registerAct("NEO POWER", "...", {"noelle"})
     self:registerAct("NEO POWER", "...", {"noelle"})
     self:registerAct("NEO POWER", "...", {"noelle"})
     self:registerAct("NEO POWER", "...", {"noelle"})
@@ -66,14 +84,13 @@ function Dummy:onAct(battler, name)
         -- Change this enemy's dialogue for 1 turn
         -- self.dialogue_override = "What did that do bruh?"
         -- Act text (since it's a list, multiple textboxes)
-        return "* Nothing happened."
+        return {
+            "* Noelle powered herself with NEO.", 
+            "* But nothing happened..."
+        }
 
-    elseif name == "Standard" then --X-Action
-        -- Give the enemy 50% mercy
-        -- self:addMercy(50)
-        -- Text for any other character (like Noelle)
-        -- return "* "..battler.chara:getName().." straightened the\ndummy's hat."
-        return "* Nothing happened."
+    elseif name == "Standard" then
+        return "AT 10 DF 0\n* A sad dummy.\n* Looks like Ralsei."
     end
 
     -- If the act is none of the above, run the base onAct function

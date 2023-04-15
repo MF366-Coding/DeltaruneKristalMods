@@ -28,8 +28,8 @@ function item:init()
 
     -- Equip bonuses (for weapons and armor)
     self.bonuses = {
-        attack = 1000000,
-        magic = 10000000
+        attack = 5,
+        magic = 10
     }
 
     -- Bonus name and icon (displayed in equip menu)

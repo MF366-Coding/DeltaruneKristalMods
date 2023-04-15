@@ -7,7 +7,7 @@
     "subtitle": "Noelle is looking for more things to kill...",
 
     // The version of your mod.
-    "version": "v0.0.2",
+    "version": "v0.0.3",
     // What version of the engine your mod was made with.
     "engineVer": "v0.8.0",
 
@@ -49,7 +49,7 @@
     },
 
     // Whether selecting your mod starts the dark world transition in the main menu or not.
-    "transition": true,
+    "transition": false,
 
     // Should never be true, but just in case. Restarts the entire engine when leaving the mod.
     // If you need this, you're most likely doing something wrong.
@@ -89,7 +89,7 @@
             // Whether the HP and Mercy bars should show percentages
             "enemyBarPercentages": true,
             // Whether pushing a block should freeze the player
-            "pushBlockInputLock": true,
+            "pushBlockInputLock": true
             // End of config
         }
     }
