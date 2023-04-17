@@ -1,3 +1,4 @@
+-- local jevil_shop = require "shops.jevil_shop"
 return {
   version = "1.5",
   luaversion = "5.1",
@@ -11,7 +12,7 @@ return {
   nextlayerid = 6,
   nextobjectid = 37,
   properties = {
-    ["name"] = "Test Map - Room 1"
+    ["name"] = "The Old Castle Town"
   },
   tilesets = {
     {
@@ -52,7 +53,7 @@ return {
         0, 0, 0, 0, 0, 0, 2, 3, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 2, 3, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 2, 3, 4, 0, 0, 0, 0, 0, 0, 0, 18, 19, 20, 0,
-        0, 0, 0, 0, 0, 0, 2, 3, 4, 0, 0, 0, 0, 0, 0, 0, 22, 23, 24, 0,
+        0, 0, 0, 0, 0, 0, 2, 3, 4, 0, 0, 0, 1000, 0, 0, 0, 22, 23, 24, 0,
         0, 0, 0, 0, 0, 0, 2, 3, 4, 0, 0, 0, 0, 0, 0, 0, 22, 9, 24, 0,
         0, 0, 0, 0, 0, 0, 2, 3, 4, 0, 0, 0, 0, 0, 0, 0, 10, 11, 12, 0,
         0, 0, 0, 0, 0, 0, 2, 3, 4, 0, 0, 0, 0, 0, 0, 0, 10, 11, 12, 0,
@@ -392,7 +393,21 @@ return {
           rotation = 0,
           visible = true,
           properties = {}
-        }
+        }--,
+        --[[ {
+          id = 1000,
+          name = "shop",
+          type = "",
+          shape = "rectangle",
+          x = 600,
+          y = 800,
+          width = 160,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["shop"] = "jevil_shop"}
+        } ]]
       }
     },
     {
@@ -422,7 +437,7 @@ return {
           properties = {
             ["actor"] = "starwalker",
             ["text1"] = "* These [color:yellow]stairs[color:reset] are [color:yellow]Pissing[color:reset] me\noff...",
-            ["text2"] = "* I'm the original   [color:yellow]Starwalker[color:reset]"
+            ["text2"] = "* I'm the original [wait:3][color:yellow]JEVIL[color:reset]!\n[wait:2]UEH EH EH!!"
           }
         },
         {
@@ -438,7 +453,7 @@ return {
           visible = true,
           properties = {
             ["text1"] = "* Silence echoes in the darkness\nof this familiar-yet-different\nscenery.",
-            ["text2"] = "* The power of avoiding copying\nofficial music shines within\nyou."
+            ["text2"] = "* The power of [color:red]getting stronger[color:reset] is within you."
           }
         },
         {

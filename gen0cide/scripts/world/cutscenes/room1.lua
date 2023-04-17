@@ -6,7 +6,5 @@ return {
         cutscene:text("* Just like your soul...")
 
     end
-
-
     
 }

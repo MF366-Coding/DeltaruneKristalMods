@@ -7,7 +7,7 @@ function Dummy:init()
     self.text = "* Here it comes again.\n* But it's different..."
 
     -- Battle music ("battle" is rude buster)
-    self.music = "battle"
+    self.music = "circus"
     -- Enables the purple grid battle background
     self.background = true
 
