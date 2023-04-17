@@ -12,7 +12,7 @@ function item:init()
     -- Item type (item, key, weapon, armor)
     self.type = "weapon"
     -- Item icon (for equipment)
-    self.icon = "items/neo_head"
+    self.icon = ""
 
     -- Battle description
     self.effect = "A weird ring that smiles."
@@ -34,7 +34,7 @@ function item:init()
 
     -- Bonus name and icon (displayed in equip menu)
     self.bonus_name = "The Power of -NEO-"
-    self.bonus_icon = "items/neo_head"
+    self.bonus_icon = ""
 
     -- Equippable characters (default true for armors, false for weapons)
     self.can_equip = {
