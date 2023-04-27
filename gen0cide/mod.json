@@ -4,7 +4,7 @@
     // Displays on the main menu.
     "name": "Too Strong to Stay Alive",
     // Displays underneath the name. Optional.
-    "subtitle": "Noelle is looking for more things to kill...",
+    "subtitle": "YOU are looking for more things to kill...",
 
     // The version of your mod.
     "version": "v0.0.5",
@@ -20,18 +20,18 @@
     "map": "room1",
 
     // The party. The first character is the player.
-    "party": ["kris", "noelle"],
+    "party": ["kris"],
 
     // The inventory. Contains three darkburgers, a cell phone and a shadow crystal by default.
     "inventory": {
-        "items": ["darkburger"],
+        "items": ["darkburger", "lmao_item", "ultimate_candy"],
         "key_items": ["shadowcrystal"]
     },
 
     // Equipment for your party. Not specifying equipment defaults to the following.
     "equipment": {
         "kris": {
-            "weapon": "wood_blade",
+            "weapon": "neo_blade",
             "armor": ["amber_card", "amber_card"]
         },
         "susie": {
@@ -40,10 +40,6 @@
         },
         "ralsei": {
             "weapon": "red_scarf",
-            "armor": ["amber_card", "amber_card"]
-        },
-        "noelle": {
-            "weapon": "neo_ring",
             "armor": ["amber_card", "amber_card"]
         }
     },

@@ -9,17 +9,17 @@ function Dummy:init()
     self:setActor("dummy")
 
     -- Enemy health
-    self.max_health = 1000
-    self.health = 750
+    self.max_health = 500
+    self.health = 400
     -- Enemy attack (determines bullet damage)
-    self.attack = 10
+    self.attack = 9
     -- Enemy defense (usually 0)
     self.defense = 0
     -- Enemy reward
-    self.money = 1
+    self.money = 3
 
     -- Mercy given when sparing this enemy before its spareable (20% for basic enemies)
-    self.spare_points = 15
+    self.spare_points = 0
 
     -- List of possible wave ids, randomly picked each turn
     self.waves = {
@@ -30,93 +30,30 @@ function Dummy:init()
 
     -- Dialogue randomly displayed in the enemy's speech bubble
     self.dialogue = {
-        "Hi guys! I am Ralsei's dummy!",
-        "Why do you want to beat me up?",
-        "Ralsei won't be very happy about it..."
+        "Leave me alone..."
     }
 
     -- Check text (automatically has "ENEMY NAME - " at the start)
-    self.check = "AT 10 DF 0\n* A sad dummy.\n* Looks like Ralsei."
+    self.check = "* [color:red] FINISH IT! [color:reset]"
 
     -- Text randomly displayed at the bottom of the screen each turn
     self.text = {
-        "* The dummy seems sad..",
-        "* Smells like fluffy\ndummies.",
-        "* The dummy is still not\nquite happy...",
+        "* It doesn't matter...\nNot anymore..."
     }
     -- Text displayed at the bottom of the screen when the enemy has low health
-    self.low_health_text = "* The dummy is even more\nunhappy now."
+    self.low_health_text = "* [color:red] DETERMINATION. [color:reset]"
 
     -- Register act called "NEO Power"
-    self:registerAct("NEO POWER", "...", {"noelle"})
-    self:registerAct("NEO POWER", "...", {"noelle"})
-    self:registerAct("NEO POWER", "...", {"noelle"})
-    self:registerAct("NEO POWER", "...", {"noelle"})
-    self:registerAct("NEO POWER", "...", {"noelle"})
-    self:registerAct("NEO POWER", "...", {"noelle"})
-    self:registerAct("NEO POWER", "...", {"noelle"})
-    self:registerAct("NEO POWER", "...", {"noelle"})
-    self:registerAct("NEO POWER", "...", {"noelle"})
-    self:registerAct("NEO POWER", "...", {"noelle"})
-    self:registerAct("NEO POWER", "...", {"noelle"})
-    self:registerAct("NEO POWER", "...", {"noelle"})
-    self:registerAct("NEO POWER", "...", {"noelle"})
-    self:registerAct("NEO POWER", "...", {"noelle"})
-    self:registerAct("NEO POWER", "...", {"noelle"})
-    self:registerAct("NEO POWER", "...", {"noelle"})
-    self:registerAct("NEO POWER", "...", {"noelle"})
-    self:registerAct("NEO POWER", "...", {"noelle"})
-    self:registerAct("NEO POWER", "...", {"noelle"})
-    self:registerAct("NEO POWER", "...", {"noelle"})
-    self:registerAct("NEO POWER", "...", {"noelle"})
-    self:registerAct("NEO POWER", "...", {"noelle"})
-    self:registerAct("NEO POWER", "...", {"noelle"})
-    self:registerAct("NEO POWER", "...", {"noelle"})
-    self:registerAct("NEO POWER", "...", {"noelle"})
-    self:registerAct("NEO POWER", "...", {"noelle"})
-    self:registerAct("NEO POWER", "...", {"noelle"})
-    self:registerAct("NEO POWER", "...", {"noelle"})
-    self:registerAct("NEO POWER", "...", {"noelle"})
-    self:registerAct("NEO POWER", "...", {"noelle"})
-    self:registerAct("NEO POWER", "...", {"noelle"})
-    self:registerAct("NEO POWER", "...", {"noelle"})
-    self:registerAct("NEO POWER", "...", {"noelle"})
-    self:registerAct("NEO POWER", "...", {"noelle"})
-    self:registerAct("NEO POWER", "...", {"noelle"})
-    self:registerAct("NEO POWER", "...", {"noelle"})
-    self:registerAct("NEO POWER", "...", {"noelle"})
-    self:registerAct("NEO POWER", "...", {"noelle"})
-    self:registerAct("NEO POWER", "...", {"noelle"})
-    self:registerAct("NEO POWER", "...", {"noelle"})
-    self:registerAct("NEO POWER", "...", {"noelle"})
-    self:registerAct("NEO POWER", "...", {"noelle"})
-    self:registerAct("NEO POWER", "...", {"noelle"})
-    self:registerAct("NEO POWER", "...", {"noelle"})
-    self:registerAct("NEO POWER", "...", {"noelle"})
-    self:registerAct("NEO POWER", "...", {"noelle"})
-    self:registerAct("NEO POWER", "...", {"noelle"})
-    self:registerAct("NEO POWER", "...", {"noelle"})
-    self:registerAct("NEO POWER", "...", {"noelle"})
-    self:registerAct("NEO POWER", "...", {"noelle"})
-    self:registerAct("NEO POWER", "...", {"noelle"})
-    self:registerAct("NEO POWER", "...", {"noelle"})
+    -- self:registerAct("NEO POWER", "...", {"noelle"})
+    
     -- Register party act with Ralsei called "Tell Story"
     -- (second argument is description, usually empty)
     -- self:registerAct("Tell Story", "", {"ralsei"})
 end
 
 function Dummy:onAct(battler, name)
-    if name == "NEO POWER" then
-        -- Change this enemy's dialogue for 1 turn
-        -- self.dialogue_override = "What did that do bruh?"
-        -- Act text (since it's a list, multiple textboxes)
-        return {
-            "* Noelle powered herself with NEO.", 
-            "* But nothing happened..."
-        }
-
-    elseif name == "Standard" then
-        return "AT 10 DF 0\n* A sad dummy.\n* Looks like Ralsei."
+    if name == "Standard" then
+        return "* Nothing happened."
     end
 
     -- If the act is none of the above, run the base onAct function

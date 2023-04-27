@@ -46,6 +46,7 @@ function item:init()
 
     -- Character reactions (key = party member id)
     self.reactions = {
+        kris = "DETERMINATION...??",
         susie = "Really, Kris?!",
         ralsei = "Kris, what's that??",
         noelle = "...no...",

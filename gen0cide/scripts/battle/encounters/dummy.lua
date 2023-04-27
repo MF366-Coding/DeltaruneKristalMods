@@ -4,10 +4,10 @@ function Dummy:init()
     super.init(self)
 
     -- Text displayed at the bottom of the screen at the start of the encounter
-    self.text = "* Here it comes again.\n* But it's different..."
+    self.text = "* You know what to do."
 
     -- Battle music ("battle" is rude buster)
-    self.music = "sounds/circus"
+    self.music = ""
     -- Enables the purple grid battle background
     self.background = true
 
@@ -15,7 +15,7 @@ function Dummy:init()
     self:addEnemy("dummy")
 
     --- Uncomment this line to add another!
-    self:addEnemy("dummy")
+    -- self:addEnemy("dummy")
 end
 
 return Dummy

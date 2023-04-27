@@ -28,8 +28,8 @@ function item:init()
 
     -- Equip bonuses (for weapons and armor)
     self.bonuses = {
-        attack = 4,
-        magic = 7
+        attack = 7,
+        magic = 10
     }
 
     -- Bonus name and icon (displayed in equip menu)
@@ -40,13 +40,13 @@ function item:init()
     self.can_equip = {
         noelle=false,
         kris=true,
-        susie=true,
+        susie=false,
         ralsei=false
     }
 
     -- Character reactions (key = party member id)
     self.reactions = {
-        noelle = "I WANT A DAMN AXE, KRIS!!! Please?"
+        kris="DETERMINATION"
     }
 end
 

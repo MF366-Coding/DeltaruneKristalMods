@@ -3,7 +3,7 @@ return {
         -- Open textbox and wait for completion
         cutscene:text("* The wall seems cracked.")
         cutscene:text("* ...")
-        cutscene:text("* Just like your soul...")
+        cutscene:text("* It doesn't matter...")
 
     end
     

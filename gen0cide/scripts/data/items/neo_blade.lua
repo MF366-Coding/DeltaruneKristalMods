@@ -1,13 +1,13 @@
 -- Instead of Item, create a HealItem, a convenient class for consumable healing items
-local item, super = Class(Item, "neo_ring")
+local item, super = Class(Item, "neo_blade")
 
 function item:init()
     super.init(self)
 
     -- Display name
-    self.name = "NEORing"
+    self.name = "NEO Blade"
     -- Name displayed when used in battle (optional)
-    self.use_name = "NEO Ring"
+    self.use_name = "NEO Blade"
 
     -- Item type (item, key, weapon, armor)
     self.type = "weapon"
@@ -15,11 +15,11 @@ function item:init()
     self.icon = ""
 
     -- Battle description
-    self.effect = "A weird ring that smiles."
+    self.effect = "A weird blade that smiles."
     -- Shop description
     self.shop = "???"
     -- Menu description
-    self.description = "A weird ring you got from defeating Spamton NEO.\nYou can feel it smiling in your hands."
+    self.description = "A weird blade you got from defeating Spamton NEO.\nYou can feel it smiling in your hands."
 
     -- Default shop price (sell price is halved)
     self.price = 0
@@ -28,8 +28,8 @@ function item:init()
 
     -- Equip bonuses (for weapons and armor)
     self.bonuses = {
-        attack = 2,
-        magic = 5
+        attack = 5,
+        magic = 7
     }
 
     -- Bonus name and icon (displayed in equip menu)
@@ -38,16 +38,15 @@ function item:init()
 
     -- Equippable characters (default true for armors, false for weapons)
     self.can_equip = {
-        noelle=true,
-        kris=false,
+        noelle=false,
+        kris=true,
         susie=false,
-        ralsei=true
+        ralsei=false
     }
 
     -- Character reactions (key = party member id)
     self.reactions = {
-        noelle = "Sad that Kris is not here to see me...",
-        ralsei = "Let's end this!"
+        kris = "DETERMINATION"
     }
 end
 
