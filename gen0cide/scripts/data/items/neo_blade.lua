@@ -17,7 +17,7 @@ function item:init()
     -- Battle description
     self.effect = "A weird blade that smiles."
     -- Shop description
-    self.shop = "???"
+    self.shop = "DETERMINATION"
     -- Menu description
     self.description = "A weird blade you got from defeating Spamton NEO.\nYou can feel it smiling in your hands."
 
@@ -28,8 +28,8 @@ function item:init()
 
     -- Equip bonuses (for weapons and armor)
     self.bonuses = {
-        attack = 5,
-        magic = 7
+        attack = 40,
+        magic = 1
     }
 
     -- Bonus name and icon (displayed in equip menu)

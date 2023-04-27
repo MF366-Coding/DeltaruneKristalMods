@@ -9,14 +9,14 @@ function Dummy:init()
     self:setActor("dummy")
 
     -- Enemy health
-    self.max_health = 500
-    self.health = 400
+    self.max_health = 250
+    self.health = 200
     -- Enemy attack (determines bullet damage)
-    self.attack = 9
+    self.attack = 1
     -- Enemy defense (usually 0)
     self.defense = 0
     -- Enemy reward
-    self.money = 3
+    self.money = 1
 
     -- Mercy given when sparing this enemy before its spareable (20% for basic enemies)
     self.spare_points = 0
@@ -34,11 +34,12 @@ function Dummy:init()
     }
 
     -- Check text (automatically has "ENEMY NAME - " at the start)
-    self.check = "* [color:red] FINISH IT! [color:reset]"
+    self.check = "[color:red] FINISH IT! [color:reset]"
 
     -- Text randomly displayed at the bottom of the screen each turn
     self.text = {
-        "* It doesn't matter...\nNot anymore..."
+        "* It doesn't matter...\nNot anymore...",
+        "* [color:red]It never did...[color:reset]"
     }
     -- Text displayed at the bottom of the screen when the enemy has low health
     self.low_health_text = "* [color:red] DETERMINATION. [color:reset]"
