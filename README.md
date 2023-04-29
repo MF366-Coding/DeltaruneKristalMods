@@ -1,4 +1,4 @@
 # My Kristal Mods
-A personal archive. 
+My personal archive containing my beloved Deltarune Mods made with Kristal engine.
 
 
