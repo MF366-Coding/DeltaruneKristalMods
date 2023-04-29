@@ -34,7 +34,7 @@ function Dummy:init()
     }
 
     -- Check text (automatically has "ENEMY NAME - " at the start)
-    self.check = "[color:red] FINISH IT! [color:reset]"
+    self.check = "AT ...\n[color:red] Just finish it already! [color:reset]"
 
     -- Text randomly displayed at the bottom of the screen each turn
     self.text = {
@@ -42,19 +42,29 @@ function Dummy:init()
         "* [color:red]It never did...[color:reset]"
     }
     -- Text displayed at the bottom of the screen when the enemy has low health
-    self.low_health_text = "* [color:red] DETERMINATION. [color:reset]"
+    self.low_health_text = "* [color:red] Determination. [color:reset]"
 
     -- Register act called "NEO Power"
-    -- self:registerAct("NEO POWER", "...", {"noelle"})
-    
+    self:registerAct("Hug", "Hug the dummy.")
+
     -- Register party act with Ralsei called "Tell Story"
     -- (second argument is description, usually empty)
     -- self:registerAct("Tell Story", "", {"ralsei"})
 end
 
 function Dummy:onAct(battler, name)
-    if name == "Standard" then
-        return "* Nothing happened."
+    if name == "Hug" then
+        return {
+            "* You tried to hug the dummy.",
+            "* But something keeps you from\ndoing so...",
+            "[color:red]* Stop playing around![wait:7]\nYou know what to do...[color:reset]"
+        }
+        
+    elseif name == "Standard" then
+        return {
+            "[color:red]* Don't try to run away...[color:reset]",
+            "* ...Nothing happened..."
+        }
     end
 
     -- If the act is none of the above, run the base onAct function

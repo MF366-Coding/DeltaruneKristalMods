@@ -1,13 +1,13 @@
 {
     // The ID of your mod. Should be unique!!
-    "id": "noelle_gen_mf366",
+    "id": "kris_gen_mf366_tstsa",
     // Displays on the main menu.
     "name": "Too Strong to Stay Alive",
     // Displays underneath the name. Optional.
     "subtitle": "YOU are looking for more things to kill...",
 
     // The version of your mod.
-    "version": "v0.0.5",
+    "version": "v0.0.6",
     // What version of the engine your mod was made with.
     "engineVer": "v0.8.0",
 
@@ -24,7 +24,7 @@
 
     // The inventory. Contains three darkburgers, a cell phone and a shadow crystal by default.
     "inventory": {
-        "items": ["darkburger", "lmao_item", "ultimate_candy"],
+        "items": ["darkburger", "ultimate_candy"],
         "key_items": ["shadowcrystal"]
     },
 
@@ -49,7 +49,7 @@
 
     // Should never be true, but just in case. Restarts the entire engine when leaving the mod.
     // If you need this, you're most likely doing something wrong.
-    "hardReset": false,
+    "hardReset": true,
 
     // Whether the mod is hidden from the mod selection.
     "hidden": false,
@@ -61,11 +61,11 @@
             // Extra 48-slot item storage
             "enableStorage": true,
             // Whether X-Actions appear in spell menu by default
-            "partyActions": true,
+            "partyActions": false,
             // Stat increases after defeating an enemy with violence
             "growStronger": true,
             // The character who grows stronger if they're in the party
-            "growStrongerChara": "noelle",
+            "growStrongerChara": "kris",
             // What sprite set Susie should use
             "susieStyle": 2,
             // What sprite set Ralsei should use

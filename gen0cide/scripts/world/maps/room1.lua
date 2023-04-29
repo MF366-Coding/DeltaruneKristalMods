@@ -12,7 +12,7 @@ return {
   nextlayerid = 6,
   nextobjectid = 37,
   properties = {
-	["name"] = "The Old Castle Town"
+	["name"] = "A Lost Past"
   },
   tilesets = {
 	{
@@ -422,8 +422,10 @@ return {
 		  visible = true,
 		  properties = {
 			["actor"] = "starwalker",
-			["text1"] = "* These [color:yellow]stairs[color:reset] are [color:yellow]Pissing[color:reset] me\noff...",
-			["text2"] = "* I'm the original [wait:3][color:yellow]JEVIL[color:reset]!\n[wait:2]UEH EH EH!!"
+			["text1"] = "* I am [color:yellow]Starwalker\n    (the original)[color:reset]",
+			["text2"] = "* [wait:5]What am I doing?\n[wait:2]Hey, [color:blue]blue guy![color:reset]",
+			["text3"] = "[color:red]* I know it was you.\n[wait:3]Didn't you already killed\nenough people?[color:reset]",
+			["text4"] = "* ......\n[wait:5]...go away..."
 		  }
 		},
 		{
@@ -439,8 +441,10 @@ return {
 		  visible = true,
 		  properties = {
 			["text1"] = "* It's Castle Town...\nbut it feels empty...",
-			["text2"] = "* Thanks to you and the power of...",
-			["text3"] = "* [color:red] DETERMINATION. [color:reset]"
+			["text2"] = "* ...and different...",
+			["text3"] = "* Is this a lost world?",
+			["text4"] = "* A world you...\n[wait:8][color:red]S H O U L D    E R A S E?[color:reset]",
+			["text5"] = "* [wait:6][color:red] Determination. [color:reset]"
 		  }
 		},
 		{
