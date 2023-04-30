@@ -1,5 +1,5 @@
 return {
-    wall = function(cutscene, event)
+    wall = function(cutscene)
         -- Open textbox and wait for completion
         cutscene:text("* The wall seems cracked.")
         cutscene:text("* . . .")
